@@ -1,0 +1,24 @@
+Exercise 4: Deleting Files
+
+1. Create a file called "test-file.txt" in your working directory with a repo
+
+2. Stage and commit test-file.txt
+
+3. Enter "git rm test-file.txt". rm stands for "remove"
+
+4. Enter "ls". test-file.txt is no longer in your working directory
+
+5. Enter "git status". Git staged a "deletion" to delete test-file.txt
+   test-file.txt has not yet been deleted from your local repo (.git folder), but
+   it is staged to be deleted.
+
+6. Enter 'git commit -m "delete test-file.txt"'
+
+   - test-file.txt no longer exists in your local working directory nor in your
+     repo's working directory. However, it still exists as a commit in your version
+     history (a photo in your box). Deleting files with Git adds a new commit to
+     your version history showing that you deleted those files and saving them as
+     they were when you deleted them. You can recover these files--we will learn how
+     to do that later
+
+7. Enter "git push" to save this deletion commit on github.com

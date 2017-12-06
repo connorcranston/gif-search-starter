@@ -1,0 +1,15 @@
+Exercise 3: Un-staging Stuff in Git
+
+1. Enter "git add <filename>" to add that file to the stage (ready to be committed)
+
+2. Enter "git status" to view that file on the "stage"
+
+3. Enter "git reset <filename>" in the working directory (the folder with your
+   github repo) of your computer's shell.
+
+   - Enter "git reset" to remove all files from the stage
+
+4. Enter "git status". That file is no longer staged to be committed
+
+   - Your console will say "nothing added to commit but untracked files present
+     (use "git add" to track)". A "tracked" file means that file is staged

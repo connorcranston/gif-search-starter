@@ -1,0 +1,25 @@
+Exercise 5: Copying Your Work with Branches
+
+1. Enter "git branch test-branch" in the working directory of your computer's shell
+
+2. Enter "git branch"
+
+   - you will see a list of two branches: master and test-branch
+   - test-branch is an exact copy of your master branch, which is the default
+     branch created with a new repository
+
+3. Enter "git checkout test-branch"
+
+   - the name "test-branch" should now be in parentheses at the end of the
+     directory path in your shell. It will turn red when you've modified a file
+
+You can now work on test-branch without affecting master branch. Later, we'll
+learn how to add the changes you made in test-branch to master branch
+
+4. Create a new file called "twig.txt" in test-branch
+
+5. Enter "ls". twig.txt will be listed
+
+5. Switch to master branch by entering "git checkout master"
+
+6. Enter "ls". twig.txt is not listed

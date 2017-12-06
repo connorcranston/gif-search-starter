@@ -1,0 +1,15 @@
+Exercise 7: Recovering Old Work from Version History
+
+1. Enter "git log" to view recent commits. Copy one of those commit IDs. Then
+   enter "q" to exit the git log
+
+2. Get the commit id of a version (photo) you'd like to go back to
+
+3. Enter "git reset --hard <commit id>"
+
+   - This will change your version history back to what is was at the commit.
+     The "--hard" option will change the files in your directory to match what
+     they were during that commit
+
+4. Views your files. They should have changed back to how they were during the
+   commit you reset them to

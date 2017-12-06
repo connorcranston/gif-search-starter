@@ -1,0 +1,43 @@
+Exercise 6: Merging Branches
+
+1. In your branch called "test-branch", created a file called "leaf.txt"
+
+   - Enter "ls" to see that leaf.txt exists in your local working directory
+
+2. Stage and commit leaf.
+
+3. Enter "git push"
+
+   - Your shell will say:
+
+      fatal: The current branch test-branch has no upstream branch.
+      To push the current branch and set the remote as upstream, use
+
+          git push --set-upstream origin test-branch
+
+   - Test-branch is not connected to your repo on github.com
+     Your "local repo" is the .git folder on your computer. "Your remote repo"
+     is the .git folder on github.com
+   - "upstream" is where "git push" pushes commits to
+   - origin is the link to your github.com repository. You can change the "remote"
+     that your master branch and/or your other branches push to. You can change
+     "origin" and you can change "upstream". We'll learn this later
+
+4. Enter "git push --set-upstream origin test-branch"
+
+   - This will set the origin (link to your github.com repo) as the place where
+     test-branch is pushed when your shell is inside of test-branch as you
+     enter "git push". It will then push your work to origin.
+
+3. Enter "git checkout master" to switch to your master branch
+
+4. Enter "git diff test-branch" to views differences between current branch
+   and test-branch
+
+5. Enter "git merge test-branch" to add the version history from test-branch to
+   the current branch.
+
+   - Adding the version history from one branch to another adds all the commits
+     to the current branches version history, which updates the current branch
+     to be an exact copy of test-branch, including new files, deleted files, and
+     files changes

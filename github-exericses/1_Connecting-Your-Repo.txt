@@ -1,0 +1,31 @@
+Intro to Git and Github. No experience necessary.
+
+Github Cheat Sheet: https://services.github.com/kit/downloads/github-git-cheat-sheet.pdf
+
+Git user's manual: https://git-scm.com/doc
+
+Exercise 1: Connecting Your Online Repo to Your Computer
+
+Do the following exercises in order:
+
+1. Create a github account at github.com
+
+2. Create a "new repository"
+
+3. Click the green button that says "Clone or Download"
+
+4. Click on use HTTPS
+
+5. Copy that https link (this link links to the repository you just created)
+
+6. In your computer's shell (Terminal, Command Prompt, Console), go to the
+   directory (folder) that you want to upload to github.
+
+7. Enter "git clone https://github.com/yourUserName/your-repository.git" where
+   the link is the link your just copied in step 5
+
+Your local directory (the folder on your computer) is now connected to your
+respository on github.com.
+
+Do the next exercise to learn how to save your local work (on your computer) to
+your repository on github.com

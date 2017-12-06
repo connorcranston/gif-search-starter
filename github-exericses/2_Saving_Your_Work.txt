@@ -1,0 +1,20 @@
+Exercise 2: Saving Your Work
+
+1. Enter "git add <filename>" in your computer's shell (Terminal, Command Prompt, Console)
+   This will prepare that file to be saved in your repo's history, permanently,
+   as it is right now, just like taking a photo and storing it in a box. This file
+   is now on the "stage" because it is "staged to be committed" (ready to be saved)
+
+   - Enter "git add ." to add all the files in your repo that you modified
+     since the last time you saved them.
+
+2. Enter "git status" to see all the files that are staged (ready to be committed)
+
+3. Enter 'git commit -m "<message describing your changes>"' to save those staged files.
+
+   - "git commit" takes a photo of all staged files and places it in a box. Your
+     repo holds this box of photos. Committing (saving) your work does not replace
+     old commits (old photos)--it adds a new commit (new photo). You can view old
+     versions of your work (old photos)--we will learn how to do this later.
+
+4. Enter "git push". This saves your box of photos ("version history") to github.com
