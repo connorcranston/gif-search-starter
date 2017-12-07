@@ -10,9 +10,47 @@ var zip = document.querySelector('.searchBox')
 var weather = document.querySelector('.weather')
 var temp = document.querySelector('.temp')
 var humid = document.querySelector('.humid')
+var convert = document.querySelector('.convert')
+var icon = document.querySelector('#iconBox')
+
+var temper
+var state = true
 
 function kelvinToFahreinheit(kelvin){
     return Math.round(kelvin * (9/5) - 459.67)
+}
+
+function fahreinheitToCelsius(faren){
+    return Math.round((faren - 32) * 5/9)
+}
+
+function addIcon(w){
+    console.log(w)
+    if(w == "Cloudy"){
+        icon.src = 'img/cloudy.png'
+    }
+    if(w == "Clouds"){
+        //icon.setAttribute('src', 'img/cloudy.png')
+        icon.src = 'img/clouds.png'
+    }    
+    if(w == "Partly-cloudy"){
+        icon.src = 'img/partly.cloudy.png'
+    }
+    if(w == "Rain"){
+        icon.src = 'img/rain.png'
+    }
+    if(w == "Snow"){
+        icon.src = 'img/snow.png'
+    }
+        if(w == "Sun"){
+        icon.src = 'img/sun.png'
+    }
+        if(w == "Thunderstorm"){
+        icon.src = 'img/thunderstorm.png'
+    }
+        if(w == "Clear"){
+        icon.src = 'img/clear.png'
+    }
 }
 
 function getWeather(zipCode){
@@ -22,9 +60,11 @@ $.ajax({
         dataType: "json",
         success: function(data){
             console.log(data)
+            temper = kelvinToFahreinheit(data.main.temp)
             weather.textContent = data.weather[0].main
+            addIcon(data.weather[0].main)
             city_name.textContent = data.name
-            temp.innerHTML = `${kelvinToFahreinheit(data.main.temp)} &deg;`
+            temp.innerHTML = `${temper} &deg;`
             humid.textContent = `${data.main.humidity}%`
         },
         error: function(error){
@@ -40,3 +80,14 @@ zip.addEventListener('keypress', function(e){
     getWeather(this.value)
     }
 })
+
+convert.addEventListener('click', function(){
+    //console.log(fahreinheitToCelsius(temper))
+    if(state == true){
+    temp.innerHTML = `${fahreinheitToCelsius(temper)} &deg C`
+    state = false
+    } else {
+        temp.innerHTML = `${temper} &deg F;`  
+        state = true  
+    }
+}) 
